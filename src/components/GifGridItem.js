@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // import { Fragment } from 'react/cjs/react.production.min';
-// import '../index.css'
 
 const GifGridItem = ({ title, url }) => {
   
@@ -13,5 +13,9 @@ const GifGridItem = ({ title, url }) => {
 
 };
 
+GifGridItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+};
 
 export default GifGridItem;
