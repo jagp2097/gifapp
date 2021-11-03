@@ -1,5 +1,5 @@
 import { shallow } from 'enzyme';
-import GifGridItem from '../components/GifGridItem';
+import GifGridItem from '../../components/GifGridItem';
 
 
 describe('Pruebas al componente GifGridItem', () => {
@@ -43,9 +43,6 @@ describe('Pruebas al componente GifGridItem', () => {
     console.log(div.props().className);
 
     expect( div.prop('className').includes('animate__fadeIn') ).toBe(true);
-
-
-
 
   });
 

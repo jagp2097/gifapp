@@ -3,6 +3,7 @@ import { Fragment } from 'react/cjs/react.production.min';
 import GifGridItem from './GifGridItem';
 import { getGifs } from '../helpers/getGifs';
 import { useFetchGifs } from '../hooks/useFetchGifs';
+import PropTypes from 'prop-types';
 
 const GifGrid = ({ category }) => {
   console.log(category)
@@ -35,4 +36,10 @@ const GifGrid = ({ category }) => {
   );
 };
 
+
+GifGrid.propTypes = {
+  category: PropTypes.string.isRequired
+}
+
 export default GifGrid;
+

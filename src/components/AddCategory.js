@@ -8,10 +8,13 @@ const AddCategory = ( { setCategories } ) => {
 
   const handleOnChange = (event) => {
     setInputValue(event.target.value);
+    console.log("handleOnChange llamado");
   };
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
+
+    console.log("handleOnSubmit llamado");
 
     if (inputValue.trim().length > 2)
     {
@@ -26,6 +29,7 @@ const AddCategory = ( { setCategories } ) => {
   return(
     //<Fragment> // podemos prescindir del fragment porque el form actua como el fragment
       <form onSubmit={ event => handleOnSubmit(event) }>
+        <p>{ inputValue }</p>
         <input 
           type="text" 
           value={ inputValue } 
